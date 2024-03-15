@@ -41,7 +41,7 @@ spec:
         pathType: Prefix
         backend:
           service:
-            name: {{ include "oncall.engine.fullname" . }}
+            name: {{ include "oncall.engine.fullname" . }}-external
             port:
               number: 8080
       {{ if .Values.grafana.enabled }}
